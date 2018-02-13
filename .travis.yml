@@ -7,6 +7,9 @@ osx_image: xcode9.2
 compiler: gcc
 
 before_install:
+  - brew install gcc
+  - export CC=gcc-7
+  - export CXX=g++-7
   - mkdir build
   - cd build
   - cmake .. -DCMAKE_BUILD_TYPE=Debug
