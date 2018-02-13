@@ -4,14 +4,9 @@ os: osx
 
 osx_image: xcode9.2
 
-before_install:
-  - brew install gcc
-  - export CC=gcc-7
-  - export CXX=g++-7
-
 script:
   - mkdir build
   - cd build
-  - cmake .. -DCMAKE_BUILD_TYPE=Debugs
+  - cmake .. -DCMAKE_BUILD_TYPE=Debug
   - cmake --build . --config Debug --target all
   - ./tests
